@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      max-width: 800px;
+      border: 2px solid gray;
+      height: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* .box:nth-child(odd) {
+      background-color: aqua;
+    }
+
+    .box:nth-child(even) {
+      background-color: rgb(201, 211, 50);
+    } */
+
+    .header {
+      background-color: aqua;
+      grid-area: header;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: antiquewhite;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: aquamarine;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: burlywood;
+    }
+    .grid-container {
+      display: grid;
+      /* grid-template-columns: 1fr 2fr 1fr 3fr; */
+      /* grid-template-columns: repeat(2, 1fr); */
+      /* grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px; */
+      grid-template-rows: 60px auto 60px;
+      grid-template-areas:
+        "sidebar header header header"
+        "sidebar main main main"
+        "sidebar footer footer footer";
+    }
+
+    /* .item {
+      background-color: red !important;
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+    .item-2 {
+      grid-row-start: 2;
+      grid-row-end: 5;
+    } */
+  </style>
+  <body>
+    <div class="container grid-container">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebad</div>
+      <div class="main">Main</div>
+      <div class="footer">Footer</div>
+      <!-- <div class="box">Box 4</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 4</div> -->
+    </div>
+  </body>
+</html>
